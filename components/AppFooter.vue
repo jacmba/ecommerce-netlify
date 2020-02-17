@@ -1,8 +1,8 @@
 <template>
   <footer>
     <section class="callout">
-      <h2>"The surprising styles of Skyline Ivy are advanced for all seasons."</h2>
-      <p>Hansel Andersen</p>
+      <h2>"Si no suena como si corrieras en chanclas no lo estás haciendo bien."</h2>
+      <p>Paulo Coelho</p>
     </section>
     <app-footer-links />
     <div class="sarahstuff">
@@ -10,7 +10,7 @@
         This project is
         <a href="https://github.com/sdras/ecommerce-netlify">open source on github</a>,
         hosted with
-        <a href="https://bit.ly/2G29YwK">Netlify</a>, and made with love by Sarah Drasner,
+        <a href="https://bit.ly/2G29YwK">Netlify</a>, and made with love by choter Sarah Drasner,
         <a
           href="https://twitter.com/sarah_edo"
         >@sarah_edo (twitter)</a> &

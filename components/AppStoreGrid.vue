@@ -1,24 +1,24 @@
 <template>
   <div class="storegrid">
     <transition-group name="items" tag="section" class="content">
-      <div v-for="item in filteredprice" :key="item.id" class="item">
+      <div v-for="item in filteredprice" :key="item.rank" class="item">
         <div class="img-contain">
-          <NuxtLink :to="`product/${item.id}`">
-            <img :src="`/products/${item.img}`" />
-          </NuxtLink>
+          <a :href="`${item.link}`" target="_blank">
+            <img :src="`${item.image}`" />
+          </a>
         </div>
         <star-rating
-          :rating="item.starrating"
+          :rating="item.rating"
           active-color="#000"
           :star-size="15"
           :show-rating="false"
           style="margin: 5px 0"
         ></star-rating>
-        <h3>{{ item.name }}</h3>
-        <h4 class="price">{{ item.price | dollar }}</h4>
-        <NuxtLink :to="`product/${item.id}`">
+        <h3>{{ item.title }}</h3>
+        <h4 class="price">{{ item.price.value | euro }}</h4>
+        <a :href="`${item.link}`" target="_blank">
           <button class="multi-item">View Item ></button>
-        </NuxtLink>
+        </a>
       </div>
     </transition-group>
     <aside>
@@ -27,7 +27,7 @@
       <h3>Filter by Price:</h3>
       <p style="margin-top: 5px">
         Max Price
-        <strong>${{ pricerange }}</strong>
+        <strong>€{{ pricerange }}</strong>
       </p>
       <input
         class="slider"
@@ -38,8 +38,8 @@
         :max="max"
         step="0.1"
       />
-      <span class="min">${{ min }}</span>
-      <span class="max">${{ max }}</span>
+      <span class="min">€{{ min }}</span>
+      <span class="max">€{{ max }}</span>
     </aside>
   </div>
 </template>
@@ -56,13 +56,13 @@ export default {
   data() {
     return {
       min: 0,
-      max: 200,
-      pricerange: 200
+      max: 500,
+      pricerange: 500
     };
   },
   computed: {
     filteredprice() {
-      return this.data.filter(el => el.price < this.pricerange);
+      return this.data.filter(el => el.price.value < this.pricerange);
     }
   },
   components: {

@@ -1,23 +1,22 @@
 <template>
   <header>
-    <h1>Skyline Ivy</h1>
+    <h1>Patineta burbujil</h1>
     <nav>
       <ul>
         <li>
-          <nuxt-link exact to="/">Home</nuxt-link>
+          <nuxt-link exact to="/">Inicio</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/all">All</nuxt-link>
+          <nuxt-link to="/all">Todo</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/women">Women</nuxt-link>
+          <nuxt-link to="/games">Gaming</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/men">Men</nuxt-link>
+          <nuxt-link to="/music">Música</nuxt-link>
         </li>
         <li>
-          <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
-          <nuxt-link to="/cart">Cart</nuxt-link>
+          <nuxt-link to="/electronics">Electrónica</nuxt-link>
         </li>
       </ul>
     </nav>

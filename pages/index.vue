@@ -4,12 +4,12 @@
     <app-sales-boxes />
     <app-textlockup>
       <template v-slot:img>
-        <img src="/bag.jpg" alt="bag" />
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71Sowz0FgwL._AC_SL1500_.jpg" alt="bag" />
       </template>
       <template v-slot:new>50%</template>
-      <template v-slot:sale>Storewide Sale</template>
-      <template v-slot:collection>Summer</template>
-      <template v-slot:details>All accessories</template>
+      <template v-slot:sale>Blablabla</template>
+      <template v-slot:collection>Why you</template>
+      <template v-slot:details>Electrónica</template>
     </app-textlockup>
     <app-featured-products />
   </div>

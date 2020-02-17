@@ -1,17 +1,23 @@
 import axios from "axios"
 import uuidv1 from "uuid/v1"
 import data from "~/static/storedata.json"
+import musicData from "~/static/musicdata.json"
+import electronicsData from "~/static/electronics.json"
 
 export const state = () => ({
   cartUIStatus: "idle",
   storedata: data,
+  musicData: musicData,
+  electronicsData: electronicsData,
   cart: []
 })
 
 export const getters = {
-  featuredProducts: state => state.storedata.slice(0, 3),
-  women: state => state.storedata.filter(el => el.gender === "Female"),
-  men: state => state.storedata.filter(el => el.gender === "Male"),
+  featuredProducts: state => [state.storedata[0], state.musicData[0], state.electronicsData[0]],
+  music: state => state.musicData,
+  games: state => state.storedata,
+  electronics: state => state.electronicsData,
+  all: state => [...state.storedata, ...state.musicData, ...state.electronicsData],
   cartCount: state => {
     if (!state.cart.length) return 0
     return state.cart.reduce((ac, next) => ac + next.quantity, 0)

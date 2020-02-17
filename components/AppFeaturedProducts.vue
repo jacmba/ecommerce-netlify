@@ -1,16 +1,16 @@
 <template>
   <section>
     <h2>
-      <span>Featured Products</span>
+      <span>Productos destacados</span>
     </h2>
     <div class="featureditems">
-      <div class="item" v-for="product in featuredProducts" :key="product.id">
-        <img :src="`/products/${product.img}`" />
-        <h3>{{ product.name }}</h3>
-        <h4>{{ product.price | dollar }}</h4>
-        <NuxtLink :to="`/product/${product.id}`">
+      <div class="item" v-for="product in featuredProducts" :key="product.rank">
+        <img :src="`${product.image}`" />
+        <h3>{{ product.title }}</h3>
+        <h4>{{ product.price.value | euro }}</h4>
+        <a :href="`${product.link}`" target="_blank">
           <button class="multi-item">View Item ></button>
-        </NuxtLink>
+        </a>
       </div>
     </div>
   </section>

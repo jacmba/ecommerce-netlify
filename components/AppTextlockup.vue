@@ -2,20 +2,20 @@
   <div class="textlockup">
     <div class="img">
       <slot name="img">
-        <img src="/shoe1.jpg" alt="shoe" />
+        <img src="https://images-na.ssl-images-amazon.com/images/I/515qvIkz3GL._AC_SL1143_.jpg" alt="shoe" />
       </slot>
     </div>
     <div class="new">
       <slot name="new">New</slot>
     </div>
     <div class="sale">
-      <slot name="sale">Men Shoes</slot>
+      <slot name="sale">Gaming</slot>
     </div>
     <div class="collection">
       <slot name="collection">Collection</slot>
     </div>
     <div class="details">
-      <slot name="details">Street Style New Fashion</slot>
+      <slot name="details">Top ventas en videojuegos<br> y to eso</slot>
     </div>
   </div>
 </template>
